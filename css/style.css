@@ -867,6 +867,31 @@ html{scroll-behavior:smooth}
    반응형 레이아웃 (카드 그리드)
 ======================================== */
 
+/* 테이블 반응형: 모바일에서 가로 스크롤 가능하도록 */
+@media (max-width: 768px) {
+  /* 테이블 컨테이너에 가로 스크롤 추가 */
+  .panel {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* 테이블 최소 너비 설정으로 레이아웃 유지 */
+  .table {
+    min-width: 500px;
+    font-size: 0.9rem;
+  }
+  
+  /* 셀 패딩 줄이기 */
+  .table th, .table td {
+    padding: 0.5rem 0.4rem;
+  }
+  
+  /* 테이블 호버 효과 제거 (모바일) */
+  .table tbody tr:hover {
+    transform: none;
+  }
+}
+
 /* 중간 화면 (700px 이상): 카드 2열 */
 @media (min-width:700px){ .card{width:calc(50% - .5rem)} }
 
