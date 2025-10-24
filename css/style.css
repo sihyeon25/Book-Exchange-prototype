@@ -3,6 +3,9 @@
    전체 페이지의 기본 스타일 설정
 ======================================== */
 
+/* Google Fonts 임포트 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
 /* 박스 모델: border-box로 통일 */
 *{box-sizing:border-box}
 
