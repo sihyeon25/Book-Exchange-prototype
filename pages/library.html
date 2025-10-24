@@ -6,10 +6,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>교환독서 – 도서 목록</title>
   
+  <!-- Google Fonts: Nanum Myeongjo (나눔명조) 로딩 최적화 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  
   <!-- 외부 스타일시트 (상위 폴더에서 참조) -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="sr-only">본문으로 건너뛰기</a>
+  
   <!-- ============================================
        HEADER
        상단 고정 헤더: 로고 + 네비게이션
@@ -29,7 +37,7 @@
        MAIN CONTENT
        도서 목록 페이지 메인 콘텐츠
   ============================================= -->
-  <main>
+  <main id="main">
     <h1>< 도서 목록 ></h1>
 
     <!-- ============================================

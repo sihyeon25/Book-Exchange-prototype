@@ -92,23 +92,23 @@
 prototype/
 │
 ├── index.html              # 메인 페이지 (홈)
-├── intro.html              # 별도 인트로 페이지 (미사용)
 ├── README.md               # 프로젝트 문서 (이 파일)
 │
 ├── css/
 │   └── style.css           # 전체 스타일시트 (모든 페이지 공통)
 │
+├── js/
+│   └── script.js           # JavaScript 파일 (현재 미사용)
+│
 ├── images/                 # 배경 이미지
 │   ├── three.jpg           # 모바일 히어로 이미지
 │   ├── five.jpg            # 데스크톱 히어로 이미지
-│   ├── six.JPG             # 인트로 배경 이미지
+│   └── six.JPG             # 인트로 배경 이미지
 │
-├── pages/                  # 서브 페이지
-│   ├── schedule.html       # 일정 페이지
-│   └── library.html        # 도서 목록 페이지
-│
-└── assets/
-    └── README.txt          # 이미지 사용 설명
+└── pages/                  # 서브 페이지
+    ├── intro.html          # 인트로 페이지 (4초 후 자동 전환)
+    ├── schedule.html       # 일정 페이지
+    └── library.html        # 도서 목록 페이지
 ```
 
 ## 특징
@@ -118,14 +118,16 @@ prototype/
 - 탭 네비게이션은 앵커 링크와 smooth scroll 활용
 - 인트로 애니메이션은 CSS animation으로 타이밍 제어
 
-### 2. 접근성 고려
+### 3. 접근성 고려
 - 시맨틱 HTML로 스크린 리더 지원
-- 충분한 색상 대비 (9:1 이상)
+- Skip-link로 키보드 네비게이션 개선 (Tab 키로 본문 바로가기)
+- 모든 main 태그에 id="main" 추가
+- 충분한 색상 대비 (WCAG AA 기준)
 - 키보드 네비게이션 가능
 - ARIA 속성으로 상태 명시
 
 ### 3. 성능 최적화
-- Google Fonts preconnect로 로딩 속도 개선
+- Google Fonts preconnect로 로딩 속도 개선 (모든 페이지)
 - 최소한의 CSS 파일 (단일 파일)
 - 이미지 lazy loading 고려한 구조
 
@@ -137,10 +139,11 @@ prototype/
 
 ## 개발 정보
 
-- **개발 기간**: 2024년 10월
+- **개발 기간**: 2024년 10월 ~ 2025년 1월
 - **개발자**: 이시현
 - **개발 목적**: 웹프로그래밍 수업 프로젝트
-- **제약 조건**: HTML/CSS만 사용
+- **제약 조건**: HTML/CSS만 사용 (JavaScript 최소화)
+- **저장소**: https://github.com/sihyeon25/Book-Exchange-prototype
 
 ## 향후 개선 사항
 
